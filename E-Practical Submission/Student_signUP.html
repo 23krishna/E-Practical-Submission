@@ -1,0 +1,148 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid rgb(52, 27, 27);
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+        </head>
+        <body>
+        
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+        case "BTech" :
+            document.getElementById("year").options[0]=new Option("Select Year","");
+            document.getElementById("year").options[1]=new Option("1","");
+            document.getElementById("year").options[2]=new Option("2","");
+            document.getElementById("year").options[3]=new Option("3","");
+            document.getElementById("year").options[4]=new Option("4","");
+            document.getElementById("branch").options[0]=new Option("Select Branch","");
+            document.getElementById("branch").options[1]=new Option("COE","");
+            document.getElementById("branch").options[2]=new Option("ENC","");
+            document.getElementById("branch").options[3]=new Option("EIC","");
+            document.getElementById("branch").options[4]=new Option("MEC","");
+            document.getElementById("branch").options[5]=new Option("CHE","");
+            break;
+        case "MTech" :
+            document.getElementById("year").options[0]=new Option("Select Year","");
+            document.getElementById("year").options[1]=new Option("1","");
+            document.getElementById("year").options[2]=new Option("2","");
+            document.getElementById("branch").options[0]=new Option("Select Branch","");
+            document.getElementById("branch").options[1]=new Option("COE","");
+            document.getElementById("branch").options[2]=new Option("ENC","");
+            document.getElementById("branch").options[3]=new Option("EIC","");
+            document.getElementById("branch").options[4]=new Option("MEC","");
+            document.getElementById("branch").options[5]=new Option("CHE","");
+            break;
+            case "Phd" :
+            document.getElementById("year").options[0]=new Option("Select Year","");
+            document.getElementById("year").options[1]=new Option("1","");
+            document.getElementById("year").options[2]=new Option("2","");
+            document.getElementById("branch").options[0]=new Option("Select Branch","");
+            document.getElementById("branch").options[1]=new Option("COE","");
+            document.getElementById("branch").options[2]=new Option("ENC","");
+            document.getElementById("branch").options[3]=new Option("EIC","");
+            document.getElementById("branch").options[4]=new Option("MEC","");
+            document.getElementById("branch").options[5]=new Option("CHE","");
+            break;
+        }
+        return true;
+    }
+    </script>
+    </head>
+    <body>
+
+     
+        
+        <div class="container">
+          <form action="/action_page.php">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your name">
+        
+           
+        
+            <label for="rno">Roll Number</label>
+            <input type="text" id="rno" name="rollnumber" placeholder="Your Roll Number">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="Email" placeholder="Your University Email Id">
+
+  
+    <div class="category_div" id="category_div">Course:
+        <select id="source" name="source" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+        <option value="">Select Course</option>
+        <option value="BTech">BTech</option>
+        <option value="MTech">MTech</option>
+        <option value="Phd">Phd</option>
+
+        </select>
+    </div>
+    <div class="sub_category_div" id="sub_category_div">Year:
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="year" id="year"><option value="">Select Year</option></select>')
+        </script>
+        <noscript>
+        <select id="year" name="year">
+            <option value="open">1</option>
+            <option value="delivered">2</option>
+            <option value="delivered">3</option>
+            <option value="delivered">4</option>
+        </select>
+        </noscript>
+    </div>
+    <div class="sub_category_div" id="sub_category_div">Select Branch:
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="branch" id="branch"><option value="">Select Branch</option></select>')
+        </script>
+        <noscript>
+        <select id="branch" name="branch">
+            <option value="open">COE</option>
+            <option value="delivered">ENC</option>
+            <option value="open">EIC</option>
+            <option value="delivered">MEC</option>
+            <option value="open">CHE</option>
+        </select>
+        </noscript>
+    </div>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Your Password" name="psw" required>
+    <br>
+        <input type="submit" value="Submit" style="text-align: center; background-color:cadetblue; position: center;">
+    
+     
+    </body>
+</html>
